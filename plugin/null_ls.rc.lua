@@ -6,13 +6,12 @@ local formatting = null_ls.builtins.formatting
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
-null_ls.setup({
+null_ls.setup {
   sources = {
-    null_ls.builtins.diagnostics.eslint_d.with({
+    diagnostics.eslint_d.with({
       diagnostics_format = '[eslint]\n #{m}\n(#{c})'
     }),
-    null_ls.builtins.diagnostics.fish,
-    formatting.prettier,
+    formatting.prettierd,
   },
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then
@@ -26,7 +25,7 @@ null_ls.setup({
       })
     end
   end,
-})
+}
 
 -- Auto commands
 vim.cmd([[ autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync() ]])
