@@ -42,9 +42,6 @@ packer.startup(function(use)
   use 'jreybert/vimagit'
 
   -- Syntax Highlighting and Colors
-  use 'PotatoesMaster/i3-vim-syntax'
-  use 'kovetskiy/sxhkd-vim'
-  use 'vim-python/python-syntax'
   use 'ap/vim-css-color'
 
   -- Colorscheme
