@@ -57,8 +57,8 @@ o.splitbelow = true
 opt.mouse = "a"
 
 -- Map <leader> to space
---g.mapleader = ' '
---g.maplocalleader = ' '
+g.mapleader = ' '
+g.maplocalleader = ' '
 
 --map escape to normal mode from terminal mode to esc key
 A.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { noremap = true })

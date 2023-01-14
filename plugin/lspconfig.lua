@@ -84,6 +84,12 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.clojure_lsp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = { ["ignore-classpath-directories"] = true },
+}
+
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }

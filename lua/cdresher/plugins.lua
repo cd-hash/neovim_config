@@ -34,6 +34,16 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'princejoogie/tailwind-highlight.nvim'
   use 'L3MON4D3/LuaSnip'
+  use 'olical/conjure'
+
+  -- Clojure specific
+  use 'clojure-vim/vim-jack-in'
+  use 'tpope/vim-dispatch'
+  use 'radenling/vim-dispatch-neovim'
+
+  -- Sexp
+  use 'guns/vim-sexp'
+  use 'tpope/vim-sexp-mappings-for-regular-people'
 
   -- File Management
   use 'nvim-tree/nvim-tree.lua'
