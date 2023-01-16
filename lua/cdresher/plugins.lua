@@ -49,7 +49,12 @@ packer.startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
 
   -- Productivity
-  use 'jreybert/vimagit'
+  use {
+    'TimUntersberger/neogit',
+    requires = {
+      'sindrets/diffview.nvim'
+    }
+  }
 
   -- Syntax Highlighting and Colors
   use 'ap/vim-css-color'
