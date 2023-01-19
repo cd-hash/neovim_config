@@ -3,6 +3,6 @@ if (not status) then return end
 
 neogit.setup {
   integrations = {
-    diffview = false
+    diffview = true
   }
 }
