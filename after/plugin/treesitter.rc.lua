@@ -31,6 +31,10 @@ ts.setup {
   autotag = {
     enable = true,
   },
+  rainbow = {
+    enable = true,
+    max_file_lines = nil
+  },
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()

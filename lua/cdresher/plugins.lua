@@ -17,6 +17,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use 'mrjones2014/nvim-ts-rainbow' -- add rainbow parens
   use 'kyazdani42/nvim-web-devicons' -- File icons
 
   -- Completions
