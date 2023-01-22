@@ -44,7 +44,6 @@ packer.startup(function(use)
 
   -- Sexp
   use 'guns/vim-sexp'
-  use 'tpope/vim-sexp-mappings-for-regular-people'
 
   -- File Management
   use 'nvim-tree/nvim-tree.lua'
