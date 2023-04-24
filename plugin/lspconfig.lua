@@ -95,7 +95,7 @@ nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
@@ -107,7 +107,6 @@ nvim_lsp.sumneko_lua.setup {
         -- Get the language server to recognize the `vim` global
         globals = { 'vim' },
       },
-
       workspace = {
         -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true),
@@ -129,14 +128,32 @@ nvim_lsp.tailwindcss.setup({
   capabilities = capabilities
 })
 
+nvim_lsp.solargraph.setup {
+  on_attach = on_attach,
+  cmd = { "solargraph", "stdio" },
+  filetypes = { "ruby" },
+  capabilities = capabilities,
+  settings = {
+    solargraph ={
+      autoformat = false,
+      completion = true,
+      diagnostic = true,
+      folding = false,
+      references = true,
+      rename = true,
+      symbols = true
+    }
+  }
+}
+
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true,
-})
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "●" },
+    severity_sort = true,
+  })
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250

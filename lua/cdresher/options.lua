@@ -69,3 +69,6 @@ g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 opt.termguicolors = true
+
+-- set .md to textwrap at 80 chars width
+vim.cmd [[autocmd FileType markdown set textwidth=80 wrap]]
